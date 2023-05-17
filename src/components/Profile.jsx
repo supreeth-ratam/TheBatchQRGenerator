@@ -37,7 +37,12 @@ function Profile() {
     snapshot(q);
   },[]);
     return <>
-        {display ? <div>User exists {details.name}</div>:<div>User does not exist</div>}
+        {display ? <div className="h-screen w-full flex justify-center items-center flex-col gap-2">
+            <p className="text-3xl font-bold uppercase">{details.name}</p>
+            <p className="text-xl">{details.description}</p>
+            <a href={details.reviewuri} className="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-pink-500 rounded-md hover:bg-pink-700 focus:outline-none focus:bg-gray-600">Click Here</a>
+
+        </div>:<div>User does not exist</div>}
     </>
 }
 
